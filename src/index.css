@@ -97,18 +97,20 @@ body::before {
   z-index: 2;
 }
 
-/* Responsive design */
+/* Force desktop layout on mobile */
 @media (max-width: 768px) {
   .scrolls-container {
-    padding: 1rem;
-    gap: 1.5rem;
+    padding: 2rem;
+    gap: 2rem;
+    max-width: 1200px;
   }
 }
 
 @media (max-width: 480px) {
   .scrolls-container {
-    padding: 0.5rem;
-    gap: 1rem;
+    padding: 2rem;
+    gap: 2rem;
+    max-width: 1200px;
   }
 }
 

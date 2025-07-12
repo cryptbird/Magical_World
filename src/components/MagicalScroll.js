@@ -66,12 +66,7 @@ const MagicalScroll = ({ title, content, index }) => {
             className={`scroll-text ${isOpen ? 'visible' : ''}`}
           >
             <div className="text-content">
-              {content.split('.').map((sentence, index, array) => (
-                <React.Fragment key={index}>
-                  {sentence.trim()}{index < array.length - 1 ? '.' : ''}
-                  {index < array.length - 1 && <br />}
-                </React.Fragment>
-              ))}
+              {content}
             </div>
             
             {/* Magical sparkles around text */}

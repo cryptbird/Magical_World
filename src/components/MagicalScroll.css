@@ -133,18 +133,11 @@
   font-size: 1.1rem;
   line-height: 1.8;
   color: #2c1810;
-  text-align: left;
+  text-align: justify;
   padding: 1rem;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 8px;
   border-left: 4px solid #8b4513;
-}
-
-/* Add spacing between sentences */
-.text-content br {
-  display: block;
-  content: "";
-  margin-top: 0.5em;
 }
 
 /* Text sparkles */
@@ -338,67 +331,67 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3), 0 0 15px rgba(139, 69, 19, 0.7);
 }
 
-/* Responsive design */
+/* Force desktop layout on mobile */
 @media (max-width: 768px) {
   .scroll-body {
-    padding: 1.5rem;
+    padding: 2rem;
   }
   
   .scroll-title {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
   
   .text-content {
-    font-size: 1rem;
-    padding: 0.8rem;
+    font-size: 1.1rem;
+    padding: 1rem;
   }
   
   .scroll-text.visible {
-    max-height: 600px;
+    max-height: 800px;
   }
   
   .scroll-handle {
-    width: 25px;
-    height: 50px;
+    width: 30px;
+    height: 60px;
   }
   
   .handle-ornament {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
   
   .magical-rune {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 }
 
 @media (max-width: 480px) {
   .scroll-body {
-    padding: 1rem;
+    padding: 2rem;
   }
   
   .scroll-title {
-    font-size: 1.3rem;
+    font-size: 1.8rem;
   }
   
   .text-content {
-    font-size: 0.9rem;
-    padding: 0.6rem;
+    font-size: 1rem;
+    padding: 1rem;
   }
   
   .scroll-text.visible {
-    max-height: 500px;
+    max-height: 800px;
   }
   
   .scroll-handle {
-    width: 20px;
-    height: 40px;
+    width: 30px;
+    height: 60px;
   }
   
   .handle-ornament {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
   
   .magical-rune {
-    font-size: 0.8rem;
+    font-size: 1.2rem;
   }
 } 
