@@ -1,0 +1,389 @@
+.magical-scroll {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  perspective: 1000px;
+}
+
+.magical-scroll:hover {
+  transform: translateY(-5px);
+}
+
+.magical-scroll:hover .hover-glow {
+  opacity: 1;
+}
+
+.scroll-body {
+  position: relative;
+  background: linear-gradient(135deg, #f4e4bc 0%, #e6d3a3 25%, #d4c095 50%, #c2ad87 75%, #b09a79 100%);
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+  transform-style: preserve-3d;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid #8b7355;
+}
+
+.scroll-body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="parchment" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="0.5" fill="%23d4c095" opacity="0.3"/></pattern></defs><rect width="100" height="100" fill="url(%23parchment)"/></svg>');
+  border-radius: 13px;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Scroll edges with magical glow */
+.scroll-edge {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 2;
+}
+
+.left-edge {
+  left: -10px;
+}
+
+.right-edge {
+  right: -10px;
+}
+
+.magical-rune {
+  font-size: 1.2rem;
+  color: #ffd700;
+  text-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700;
+  animation: runeGlow 3s ease-in-out infinite;
+}
+
+.magical-rune:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.magical-rune:nth-child(3) {
+  animation-delay: 2s;
+}
+
+@keyframes runeGlow {
+  0%, 100% { 
+    text-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700;
+    transform: scale(1);
+  }
+  50% { 
+    text-shadow: 0 0 15px #ffd700, 0 0 30px #ffd700, 0 0 40px #ffd700;
+    transform: scale(1.2);
+  }
+}
+
+/* Scroll content */
+.scroll-content {
+  position: relative;
+  z-index: 1;
+}
+
+.scroll-title {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2c1810;
+  text-align: center;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  transition: all 0.5s ease;
+}
+
+.magical-scroll:hover .scroll-title {
+  color: #8b4513;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3), 0 0 10px rgba(139, 69, 19, 0.5);
+}
+
+/* Scroll text content */
+.scroll-text {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.scroll-text.visible {
+  max-height: 500px;
+  opacity: 1;
+  transform: translateY(0);
+  margin-top: 1rem;
+}
+
+.text-content {
+  font-family: 'Crimson Text', serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #2c1810;
+  text-align: justify;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  border-left: 4px solid #8b4513;
+}
+
+/* Text sparkles */
+.text-sparkles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.scroll-text.visible .text-sparkles {
+  opacity: 1;
+}
+
+.text-sparkles .sparkle {
+  position: absolute;
+  font-size: 1rem;
+  color: #ffd700;
+  text-shadow: 0 0 10px #ffd700;
+  animation: sparkleFloat 4s ease-in-out infinite;
+}
+
+.text-sparkles .sparkle:nth-child(1) {
+  top: 10%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.text-sparkles .sparkle:nth-child(2) {
+  top: 20%;
+  right: 15%;
+  animation-delay: 1s;
+}
+
+.text-sparkles .sparkle:nth-child(3) {
+  bottom: 30%;
+  left: 20%;
+  animation-delay: 2s;
+}
+
+.text-sparkles .sparkle:nth-child(4) {
+  bottom: 20%;
+  right: 10%;
+  animation-delay: 3s;
+}
+
+@keyframes sparkleFloat {
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg);
+    opacity: 0.8;
+  }
+  50% { 
+    transform: translateY(-10px) rotate(180deg);
+    opacity: 1;
+  }
+}
+
+/* Scroll handles */
+.scroll-handle {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 60px;
+  background: linear-gradient(135deg, #8b7355 0%, #a08a6b 50%, #8b7355 100%);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 
+    0 5px 15px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  z-index: 3;
+}
+
+.left-handle {
+  left: -15px;
+}
+
+.right-handle {
+  right: -15px;
+}
+
+.handle-ornament {
+  font-size: 1.5rem;
+  color: #ffd700;
+  text-shadow: 0 0 5px #ffd700;
+  animation: handleGlow 2s ease-in-out infinite;
+}
+
+@keyframes handleGlow {
+  0%, 100% { 
+    text-shadow: 0 0 5px #ffd700;
+    transform: scale(1);
+  }
+  50% { 
+    text-shadow: 0 0 10px #ffd700, 0 0 15px #ffd700;
+    transform: scale(1.1);
+  }
+}
+
+/* Hover glow effect */
+.hover-glow {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: radial-gradient(circle, rgba(255, 215, 0, 0.1) 0%, transparent 70%);
+  border-radius: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Click sparkle effect */
+.click-sparkles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.click-sparkles .sparkle {
+  position: absolute;
+  font-size: 1.5rem;
+  color: #ffd700;
+  text-shadow: 0 0 10px #ffd700;
+  animation: clickSparkle 1s ease-out forwards;
+}
+
+.click-sparkles .sparkle:nth-child(1) {
+  top: 20%;
+  left: 20%;
+  animation-delay: 0s;
+}
+
+.click-sparkles .sparkle:nth-child(2) {
+  top: 30%;
+  right: 25%;
+  animation-delay: 0.1s;
+}
+
+.click-sparkles .sparkle:nth-child(3) {
+  bottom: 40%;
+  left: 30%;
+  animation-delay: 0.2s;
+}
+
+.click-sparkles .sparkle:nth-child(4) {
+  bottom: 30%;
+  right: 20%;
+  animation-delay: 0.3s;
+}
+
+@keyframes clickSparkle {
+  0% {
+    opacity: 1;
+    transform: scale(0) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.5) rotate(180deg);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2) rotate(360deg);
+  }
+}
+
+/* Open state animations */
+.magical-scroll.open .scroll-body {
+  transform: scale(1.02) rotateX(5deg);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.2),
+    0 0 20px rgba(255, 215, 0, 0.3);
+}
+
+.magical-scroll.open .scroll-title {
+  color: #8b4513;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3), 0 0 15px rgba(139, 69, 19, 0.7);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .scroll-body {
+    padding: 1.5rem;
+  }
+  
+  .scroll-title {
+    font-size: 1.5rem;
+  }
+  
+  .text-content {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+  
+  .scroll-handle {
+    width: 25px;
+    height: 50px;
+  }
+  
+  .handle-ornament {
+    font-size: 1.2rem;
+  }
+  
+  .magical-rune {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .scroll-body {
+    padding: 1rem;
+  }
+  
+  .scroll-title {
+    font-size: 1.3rem;
+  }
+  
+  .text-content {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+  
+  .scroll-handle {
+    width: 20px;
+    height: 40px;
+  }
+  
+  .handle-ornament {
+    font-size: 1rem;
+  }
+  
+  .magical-rune {
+    font-size: 0.8rem;
+  }
+} 
