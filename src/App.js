@@ -9,11 +9,16 @@ const App = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [isMusicEnabled, setIsMusicEnabled] = useState(false);
 
+  // Helper function to add line breaks after periods
+  const addLineBreaksAfterPeriods = (text) => {
+    return text.split('. ').join('.\n\n');
+  };
+
   // Scroll data with magical chapter content
   const scrollsData = [
     {
       title: "Chapter I: One who lives",
-      content: `Once upon a time there was an angel girl.
+      content: addLineBreaksAfterPeriods(`Once upon a time there was an angel girl.
 She married to a boy younger to her.
 They had sex and made babies.
 A lot of babies 🙂.
@@ -39,17 +44,16 @@ The witch baby was given in a home full of theists with another younger human ba
 The devil baby was also sent to a house of theist woman, with a son. 
 Both parents were hypnotised and didn't realised that they were not their kids.
 
-
 Even being infants, evil didn't stop. The witch went on to learn the dark skills and was able to get control over all the other kids with her addictive dance moves.
 
 On the other hand, the devil starting cloning himself in thought of creating his own army, but couldn't go on with more than 1 clone due to lack of magical equipments.
 
 The world was in danger 💀
-The life was growing to take on the life of one who lives.`
+The life was growing to take on the life of one who lives.`)
     },
     {
       title: "Chapter II: Just got started!",
-      content: `In the next couple of years, babies find it very difficult to understand the working of the human world.
+      content: addLineBreaksAfterPeriods(`In the next couple of years, babies find it very difficult to understand the working of the human world.
 Time goes on, evil rose in understandings of the world.
 The angels were scared that if these evil witch and devil recognise their true potential they'll clear out the whole world. 
 So they decided to jail them in their city and their home with restricted outings in order to control their prowess for domination.
@@ -62,11 +66,11 @@ Angels reach to intervene but failed miserably.
 Coincidence of dark lord, the devil kid walks in the same jail as the witch.
 This created a catastrophic situation for angels.
 
-The evil uprising in the world just got started!`
+The evil uprising in the world just got started!`)
     },
     {
       title: "Chapter III: Kots vs Gwals",
-      content: `In this new world, both devil and witch find their own friends.
+      content: addLineBreaksAfterPeriods(`In this new world, both devil and witch find their own friends.
 Both live their different lives at a completely different pace.
 Just one day, finally they meet!
 Smiling at each other's faces not knowing anything about each other.
@@ -75,13 +79,11 @@ Time passes, they join the same cult.
 Spending more time together. 
 But sharing the same cult has its own limitations. It ended the devil hating the witch for not giving him the primous solace of attention, the eternal charm, which devil loved.
 
-The Devil of land of kots started planning the end of the witty witch of land of gwals.
-
-`
+The Devil of land of kots started planning the end of the witty witch of land of gwals.`)
     },
     {
       title: "Chapter IV: Witch and the gate of immortality",
-      content: `The hate for the witch increased when devil was thrown out of the cult for protesting against witch’s friends.
+      content: addLineBreaksAfterPeriods(`The hate for the witch increased when devil was thrown out of the cult for protesting against witch's friends.
 
 Time passes, the cult fails, friends cheat, blood stained, fights went on.
 
@@ -91,12 +93,11 @@ At the end of the war against the cult, when devil was about to break, someone s
 
 The witch saves the devil and elopes to the dark portal of clouds with no connections to the cult world. Leaving back her friends to save an enemy. 
 
-This hate opened the gate of love.
-`
+This hate opened the gate of love.`)
     },
     {
       title: "Chapter V: Devil and the stone of eternal power of people",
-      content: `Time passes, devil and witch starts their own cult👥.
+      content: addLineBreaksAfterPeriods(`Time passes, devil and witch starts their own cult👥.
 They grew, they met new people, loved more and broader life.
 Increased their connections to the outer world.
 In the thirst of power they fought, they prayed, they lived, but never turned back.
@@ -109,12 +110,11 @@ He walked and walked and never looked at the witch who was waiting for a friend 
 She continued learning new skills and dark magic.
 
 The life was struck and the jail time was towards the end. 
-The never ending desire of the stone and never fulfilling desire of a friend was burning the dark hearts of evil.
-`
+The never ending desire of the stone and never fulfilling desire of a friend was burning the dark hearts of evil.`)
     },
     {
       title: "Chapter VI: Angels cried",
-      content: `The life was struck and the jail time was towards the end. 
+      content: addLineBreaksAfterPeriods(`The life was struck and the jail time was towards the end. 
 Devil was still far from his beloved stone, lost in dark clouds of ignorance. 
 
 One day while searching for the stone alone he realised the absence of the witch when he turns back to see her far away.
@@ -126,12 +126,11 @@ And bam the devil hugs the witch, crying in agony of thoughts of losing her.
 The hug was tight, fulfilling for devil, satisfying for his tears, enough for his words, relaxation for his eyes, sensation for his hands, rejuvenation for his mind.
 In that second the nature paused, the angels cried, the water paused, the air didn't flow, the light in the eyes was as bright as a blind. And within a blink of an eye a stone comes out of the heart of the witch.
 
-The stone of people which the devil seeked around the world, was within the witch. Devil's witch!
-`
+The stone of people which the devil seeked around the world, was within the witch. Devil's witch!`)
     },
     {
       title: "Chapter VII: The witch's tale",
-      content: `When I hugged you that day, it was complete. 
+      content: addLineBreaksAfterPeriods(`When I hugged you that day, it was complete. 
 When I told you that day, about everything i thought, it was relaxing.
 When I thought I lost you, you won me.
 When I said laugh, you didn't, then we both laughed.
@@ -143,8 +142,8 @@ When I needed, you came.
 When I came, you didn't cum (yeah that's frustrating ;) ).
 When you loved, I cried.
 Because you are so special to me that I can't express them in mere words. What draupadi to krishna was, what Hermione to harry was, what Noah to Nick was ;) ,is what you are to me.
-You are not unique, you are me ( without a dick and an extra hole :) ). Like I am a slow minded confused cute lovable devil, you are a slow minded confused ugly lovable witch and also cute bhi ;) . We are not unique, we are just one, can't be compared, can't be cloned, can't be copied, can't be seperated, can't be mended, can't be bitched about, can't be broken, can’t be mended with, can't be strangers. 
-I know you, what you feel when I do such dumb things. I feel guilty of it, then I don't know what to do to make them right, then I go to my witch then she tells me how to mend things, then I try to mend things, then you laugh. It's a vicious cycle motu. And it will go on for ever. I am crying, I don't even know why, actually I know, I miss you. I want that complete hug, I want that stone of satisfaction which you carry with each hug of yours. I miss you witch. I love you!!!`
+You are not unique, you are me ( without a dick and an extra hole :) ). Like I am a slow minded confused cute lovable devil, you are a slow minded confused ugly lovable witch and also cute bhi ;) . We are not unique, we are just one, can't be compared, can't be cloned, can't be copied, can't be seperated, can't be mended, can't be bitched about, can't be broken, can't be mended with, can't be strangers. 
+I know you, what you feel when I do such dumb things. I feel guilty of it, then I don't know what to do to make them right, then I go to my witch then she tells me how to mend things, then I try to mend things, then you laugh. It's a vicious cycle motu. And it will go on for ever. I am crying, I don't even know why, actually I know, I miss you. I want that complete hug, I want that stone of satisfaction which you carry with each hug of yours. I miss you witch. I love you!!!`)
     }
     // ,
     // {
