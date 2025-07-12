@@ -144,9 +144,7 @@ When I came, you didn't cum (yeah that's frustrating ;) ).
 When you loved, I cried.
 Because you are so special to me that I can't express them in mere words. What draupadi to krishna was, what Hermione to harry was, what Noah to Nick was ;) ,is what you are to me.
 You are not unique, you are me ( without a dick and an extra hole :) ). Like I am a slow minded confused cute lovable devil, you are a slow minded confused ugly lovable witch and also cute bhi ;) . We are not unique, we are just one, can't be compared, can't be cloned, can't be copied, can't be seperated, can't be mended, can't be bitched about, can't be broken, can’t be mended with, can't be strangers. 
-I know you, what you feel when I do such dumb things. I feel guilty of it, then I don't know what to do to make them right, then I go to my witch then she tells me how to mend things, then I try to mend things, then you laugh. It's a vicious cycle motu. And it will go on for ever. I am crying, I don't even know why, actually I know, I miss you. I want that complete hug, I want that stone of satisfaction which you carry with each hug of yours. 
-I miss you witch
-I love you!!!`
+I know you, what you feel when I do such dumb things. I feel guilty of it, then I don't know what to do to make them right, then I go to my witch then she tells me how to mend things, then I try to mend things, then you laugh. It's a vicious cycle motu. And it will go on for ever. I am crying, I don't even know why, actually I know, I miss you. I want that complete hug, I want that stone of satisfaction which you carry with each hug of yours. I miss you witch. I love you!!!`
     }
     // ,
     // {
