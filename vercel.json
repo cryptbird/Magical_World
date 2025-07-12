@@ -1,9 +1,5 @@
 {
   "version": 2,
-  "buildCommand": "npm run build",
-  "outputDirectory": "build",
-  "installCommand": "npm install",
-  "framework": "create-react-app",
   "builds": [
     {
       "src": "package.json",
@@ -30,9 +26,5 @@
       "src": "/(.*)",
       "dest": "/index.html"
     }
-  ],
-  "env": {
-    "CI": "false",
-    "NODE_ENV": "production"
-  }
+  ]
 } 
