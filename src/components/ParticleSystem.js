@@ -8,11 +8,18 @@ const ParticleSystem = () => {
   const animationRef = useRef(null);
 
   useEffect(() => {
+    // Check if we're in a browser environment
+    if (typeof window === 'undefined') return;
+    
     const canvas = canvasRef.current;
+    if (!canvas) return;
+    
     const ctx = canvas.getContext('2d');
+    if (!ctx) return;
     
     // Set canvas size
     const resizeCanvas = () => {
+      if (!canvas) return;
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     };
@@ -119,6 +126,8 @@ const ParticleSystem = () => {
 
     // Animation loop
     const animate = () => {
+      if (!ctx || !canvas) return;
+      
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       
       // Update and draw particles
@@ -144,9 +153,13 @@ const ParticleSystem = () => {
     };
 
     // Initialize and start
-    initParticles();
-    animate();
-    window.addEventListener('mousemove', handleMouseMove);
+    try {
+      initParticles();
+      animate();
+      window.addEventListener('mousemove', handleMouseMove);
+    } catch (error) {
+      console.warn('Particle system initialization failed:', error);
+    }
 
     return () => {
       window.removeEventListener('resize', resizeCanvas);

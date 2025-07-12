@@ -7,7 +7,11 @@ const MagicWand = () => {
   const mouseRef = useRef({ x: 0, y: 0 });
 
   useEffect(() => {
+    // Check if we're in a browser environment
+    if (typeof window === 'undefined') return;
+    
     const wand = wandRef.current;
+    if (!wand) return;
     
     const handleMouseMove = (e) => {
       mouseRef.current.x = e.clientX;
@@ -31,7 +35,11 @@ const MagicWand = () => {
       trailRef.current = trailRef.current.filter(point => now - point.timestamp < 500);
     };
 
-    window.addEventListener('mousemove', handleMouseMove);
+    try {
+      window.addEventListener('mousemove', handleMouseMove);
+    } catch (error) {
+      console.warn('Magic wand initialization failed:', error);
+    }
     
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
