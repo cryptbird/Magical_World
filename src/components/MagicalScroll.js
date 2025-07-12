@@ -7,6 +7,11 @@ const MagicalScroll = ({ title, content, index }) => {
   const scrollRef = useRef(null);
   const contentRef = useRef(null);
 
+  // Function to format content with line breaks after each full stop
+  const formatContent = (text) => {
+    return text.replace(/\. +/g, '.<br><br>');
+  };
+
   const handleClick = () => {
     if (isAnimating) return;
     
@@ -65,9 +70,10 @@ const MagicalScroll = ({ title, content, index }) => {
             ref={contentRef}
             className={`scroll-text ${isOpen ? 'visible' : ''}`}
           >
-            <div className="text-content">
-              {content}
-            </div>
+            <div 
+              className="text-content"
+              dangerouslySetInnerHTML={{ __html: formatContent(content) }}
+            />
             
             {/* Magical sparkles around text */}
             <div className="text-sparkles">
