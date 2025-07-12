@@ -133,11 +133,18 @@
   font-size: 1.1rem;
   line-height: 1.8;
   color: #2c1810;
-  text-align: justify;
+  text-align: left;
   padding: 1rem;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 8px;
   border-left: 4px solid #8b4513;
+}
+
+/* Add spacing between sentences */
+.text-content br {
+  display: block;
+  content: "";
+  margin-top: 0.5em;
 }
 
 /* Text sparkles */
