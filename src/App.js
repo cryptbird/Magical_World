@@ -12,12 +12,57 @@ const App = () => {
   // Scroll data with magical chapter content
   const scrollsData = [
     {
-      title: "Chapter I: The Awakening",
-      content: "In the depths of an ancient library, where dust motes dance in beams of golden light, a young apprentice discovers a tome bound in leather as old as time itself. The pages whisper secrets of forgotten magic, and as the first chapter unfolds, the very air seems to crackle with potential. Here begins the journey into realms where reality bends and imagination takes flight."
+      title: "Chapter I: One who lives",
+      content: `Once upon a time there was an angel girl.
+She married to a boy younger to her.
+They had sex and made babies.
+A lot of babies 🙂.
+One of their babies, a boy then married to a girl. 
+And they had sex and made babies.
+A lot of babies 🙂.
+One of their babies, a girl then married to a boy.
+And guess what, they had sex and made 2 babies.
+One was a girl, other was a boy.
+The boy was a devil. While the girl was a witch.
+
+Our angel girl got shocked how her successors could turn out to witch and devil 🫢😶‍🌫.
+
+Everyone was scared!! 😨
+They called for a community meeting, and decided to kill the horror babies away.
+
+One wise man stood up and asked to not do the devilous act of killing infants. He was heard, and hence the babies were decided to be sent to humanity.
+
+NOT TOGETHER!! ~Angel girl said
+
+They were thrown at two different places 336 kms away.
+The witch baby was given in a home full of theists with another younger human baby boy.
+The devil baby was also sent to a house of theist woman, with a son. 
+Both parents were hypnotised and didn't realised that they were not their kids.
+
+
+Even being infants, evil didn't stop. The witch went on to learn the dark skills and was able to get control over all the other kids with her addictive dance moves.
+
+On the other hand, the devil starting cloning himself in thought of creating his own army, but couldn't go on with more than 1 clone due to lack of magical equipments.
+
+The world was in danger 💀
+The life was growing to take on the life of one who lives.`
     },
     {
-      title: "Chapter II: The First Spell",
-      content: "With trembling hands and a heart full of wonder, the apprentice speaks the ancient words. The air shimmers like morning dew, and for the first time, magic becomes more than just stories told by candlelight. The spell takes shape—a gentle orb of light that dances and weaves through the air, carrying with it the promise of infinite possibilities."
+      title: "Chapter II: Just got started!",
+      content: `In the next couple of years, babies find it very difficult to understand the working of the human world.
+Time goes on, evil rose in understandings of the world.
+The angels were scared that if these evil witch and devil recognise their true potential they'll clear out the whole world. 
+So they decided to jail them in their city and their home with restricted outings in order to control their prowess for domination.
+
+After seventeen long years, witch rose up to power after she was released by her human captivators in a human jail. 
+
+And this was the biggest mistake in the history of witchcraft and evil. 
+Angels reach to intervene but failed miserably. 
+
+Coincidence of dark lord, the devil kid walks in the same jail as the witch.
+This created a catastrophic situation for angels.
+
+The evil uprising in the world just got started!`
     },
     {
       title: "Chapter III: The Hidden Library",
